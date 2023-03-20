@@ -1,0 +1,21 @@
+{
+  "name": "sudoku",
+  "url": "http://localhost:8084",
+  "provides": {
+    "ap-games/game": {
+      "sudoku": {
+        "attributes": {
+          "name": "Sudoku",
+          "description": "A sudoku game",
+          "thumbnail": "/images/thumbnail.jpg"
+        },
+        "elements": {
+          "main": {
+            "url": "",
+            "type": "iframe"
+          }
+        }
+      }
+    }
+  }
+}
