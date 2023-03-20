@@ -1,4 +1,4 @@
-import SudokuHelper from "./sudoku.helper"
+import * as SudokuHelper from "./sudoku.helper"
 
 describe('sudiku.helper', () => {
 
@@ -50,13 +50,29 @@ describe('sudiku.helper', () => {
       // Execution
       const aResult = SudokuHelper.buildGrid(gridRaw)
       // Assertion
-      const aExpected = [
-        ['1','2','3','4'],
-        ['5','6','7','8'],
-        ['9','0','a','b'],
-        ['c','d','e','f'],
+      const iExpectedSize = 2
+      const aExpectedRows = [
+        ['1', '2', '3', '4'],
+        ['5', '6', '7', '8'],
+        ['9', '0', 'a', 'b'],
+        ['c', 'd', 'e', 'f'],
       ]
-      expect(aResult).toEqual(aExpected)
+      const aExpectedCols = [
+        ['1', '5', '9', 'c'],
+        ['2', '6', '0', 'd'],
+        ['3', '7', 'a', 'e'],
+        ['4', '9', 'b', 'f'],
+      ]
+      const aExpectedGrids = [
+        ['1', '2', '5', '6'],
+        ['3', '4', '7', '8'],
+        ['9', '0', 'c', 'd'],
+        ['a', 'b', 'e', 'f'],
+      ]
+      expect(aResult.size).toEqual(iExpectedSize)
+      expect(aResult.rows).toEqual(aExpectedRows)
+      expect(aResult.cols).toEqual(aExpectedCols)
+      expect(aResult.grids).toEqual(aExpectedGrids)
     })
   })
 
