@@ -1,6 +1,6 @@
-import { buildGrid, checkGrid } from "./sudoku.helper"
+import { buildGrid, checkGrid } from './sudoku.helper'
 
-class SudokuGrid {
+class SudokuBoard {
 
   /* Attributes */
 
@@ -46,4 +46,4 @@ class SudokuGrid {
   }
 }
 
-export default SudokuGrid
+export default SudokuBoard

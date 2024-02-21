@@ -22,13 +22,13 @@ export const buildGrid = (gridRaw: string) => {
   for (let i = 0; i < gridRaw.length; i++) {
     const v = gridRaw.charAt(i)
 
-    const y = Math.floor(i / size)
-    const x = y % size
+    const x = Math.floor(i / size)
+    const y = i % size
 
     const z = Math.floor(x / square) * square + Math.floor(y / square)
 
-    rows[y].push(v)
-    cols[x].push(v)
+    rows[x].push(v)
+    cols[y].push(v)
     grids[z].push(v)
   }
   return {
